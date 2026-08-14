@@ -48,7 +48,7 @@ collections:
         name: "landing"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # About page
   - name: "about"
@@ -97,5 +97,12 @@ collections:
       - { label: "✏️ Image Description (for accessibility)", name: "imageAlt", widget: "string"}
 
       - { label: "📏 Highlight?", name: "highlight", widget: "boolean", default: false }
+      
+      - label: "📝 Project Description"
+        name: "projectDescription"
+        widget: "text"
+        required: false
+        hint: "One-paragraph description shown on top of body and on highlighted project cards."
 
       - { label: "👋 Project Content", name: "body", widget: "markdown" }
+

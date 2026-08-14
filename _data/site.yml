@@ -1,9 +1,11 @@
 title: Nasma's Portfolio :)
 nav:
-  - label: About
+  - label: I am grateful(?)
+    url: /content/projects/2000-03-main-project/
+  - label: Portfolio
+    url: "#portfolio"
+  - label: About/Contact
     url: /about
-  - label: Contact
-    url: /contact
 footer:
   text: Get in touch
   links:

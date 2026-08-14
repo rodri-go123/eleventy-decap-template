@@ -1,4 +1,61 @@
-// image sizes
+:root {
+  --black-grey: #252525;
+  --spacer: 24px;
+  --page-width: 1200px;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black-grey);
+  hyphens: auto;
+}
+
+#main {
+  flex: 1; // Main content should expand to fill leftover space //
+}
+
+
+// Text elements //
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Widths, paddings & margins //
+.main-section {
+  width: 100%;
+}
+
+.full-width {
+  width: var(--page-width);
+}
+
+// Display //
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+// Image sizes //
 figure {
     margin: 20px 0px;
     padding: 0;
@@ -8,19 +65,19 @@ figure > img {
     width: 100%;
 }
 
-figure .extra-large {
+figure .extra-large, .extra-large > figcaption {
   width: 85%;
 }
 
-figure .large {
+figure .large, .large > figcaption {
   width: 65%;
 }
 
-figure .medium {
+figure .medium, .medium > figcaption {
   width: 50%;
 }
 
-figure .small {
+figure .small, .small > figcaption {
   width: 35%;
 }
 
@@ -29,4 +86,50 @@ figure .small {
 figcaption {
   font-size: 0.9rem;
   opacity: 0.6;
+}
+
+// Media Queries //
+
+// Monitors, large laptops //
+@media (width >= 1500px) {
+
+  :root {
+    --page-width: 1400px;
+  }
+
+}
+
+/* Laptop, minimised */
+@media (width <= 1250px) {
+
+  :root {
+    --page-width: 1100px;
+  }
+
+}
+
+@media (width <= 1150px) {
+
+  :root {
+    --page-width: 1000px;
+  }
+
+}
+
+@media (width <= 1050px) {
+
+  :root {
+    --page-width: 900px;
+  }
+
+}
+
+// Vertical layouts //
+
+@media (width <= 950px) {
+
+  :root {
+    --page-width: 92vw;
+  }
+
 }
