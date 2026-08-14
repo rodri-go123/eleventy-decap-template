@@ -19,6 +19,10 @@ html, body {
   hyphens: auto;
 }
 
+body:has(.lp-slideshow) {
+  overflow: hidden;
+}
+
 #main {
   flex: 1; // Main content should expand to fill leftover space //
 }

@@ -9,8 +9,11 @@ import implicitFigures from "markdown-it-implicit-figures";
 
 export default function (eleventyConfig) {
 
+    eleventyConfig.ignores.add("README.md");
+
     // copy decap admin files to the output folder
     eleventyConfig.addPassthroughCopy("admin");
+    eleventyConfig.addPassthroughCopy("scripts");
 
 	// run local server
 	  eleventyConfig.setServerOptions({

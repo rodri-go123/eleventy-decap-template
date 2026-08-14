@@ -1,8 +1,13 @@
-<div id="projects-container" class="main-section flex-center">
-  <div class="projects-wrapper">
-    {% for project in collections.project%}
-      {# <a href="{{project.url}}"><p>{{ project.data.title }}</p></a> #}
-      {% include "_partials/project_card.njk" %}
+<div id="projects-container" class="lp-slideshow" aria-label="Project slideshow" tabindex="0">
+  <div class="lp-slides">
+    {% for project in collections.project | reverse %}
+      {% include "_partials/lp_pr_card.njk" %}
     {% endfor %}
   </div>
+  <div class="lp-slideshow-status" aria-live="polite"></div>
 </div>
+
+<script type="module">
+  import { initializeSlideshow } from '/scripts/slideshow.js';
+  initializeSlideshow();
+</script>

@@ -5,4 +5,43 @@ css:
   - /styles/_project_page.css
 ---
 
-{{ content | safe }}
+<div class="project-page-container main-section">
+  {# head #}
+  <div id="project-head" class="project-page-wrapper flex-center">
+    <div class="pr-page-pic-wrapper"><img class="pr-page-pic" src="{{thumbnail | toWebp}}" alt="{{ imageAlt }}"></div>
+
+    <div class="project-head full-width">
+      <h1 class="pr-page-title">{{ title }}</h1>
+      <h2 class="pr-page-subtitle">{{ subtitle }}</h2>
+      <p class="pr-page-info">{{ info }}, {{year}}</p>
+      <p class="pr-page-categories">
+
+        {%- for category in categories -%}
+          <a href="/categories/{{ category | slug }}/"><span class="tag tag--big">{{ category | capitalize }}</span></a>
+          {%- if not loop.last -%}
+              &nbsp;
+            {%- endif -%}
+        {%- endfor -%}
+
+      </p>
+
+      {% set cleanUrl = page.url | replace('^/', '') %}
+      {% set lookupKey = page.url.slice(1) ~ 'index.html' %}
+      <p class="pr-page-size">{{ siteSize.pageSizes[lookupKey] | round(1) or 'Unknown' }} KB
+        <span class="info-icon" tabindex="0">ⓘ
+          <span class="tooltip">
+            Calculated page size including HTML and linked assets (images, code, etc.)
+          </span>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  {# body #}
+  <div class="project-page-wrapper flex-center">
+    <div class="project-body full-width">
+      {{ content | safe }}
+    </div>
+  </div>
+
+</div>

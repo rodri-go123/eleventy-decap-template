@@ -1,0 +1,12 @@
+<article class="lp-pr-card{% if loop.first %} is-active{% endif %}" aria-hidden="{% if loop.first %}false{% else %}true{% endif %}">
+  <div class="lp-pr-image-wrapper">
+    <img class="lp-pr-image" src="{{ project.data.thumbnail | toWebp }}" alt="{{ project.data.imageAlt }}">
+  </div>
+  <a class="lp-pr-card-link" href="{{ project.url }}" tabindex="{% if loop.first %}0{% else %}-1{% endif %}">
+    <div class="lp-pr-body">
+      <h2 class="lp-pr-title">{{ project.data.title }}</h2>
+      <p class="lp-pr-subtitle">{{ project.data.subtitle }}</p>
+      <p class="lp-pr-info">{{ project.data.info }}, {{ project.data.year }}</p>
+    </div>
+  </a>
+</article>

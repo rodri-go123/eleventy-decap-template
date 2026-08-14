@@ -1,0 +1,8 @@
+.lp-slideshow {
+	height: 100%;
+}
+
+body:has(.lp-slideshow) #main {
+	min-height: 0;
+	overflow: hidden;
+}

@@ -1,16 +1,16 @@
-title: Nasma's Portfolio :)
+title: Jane Doe — Artistic Research
 nav:
-  - label: I am grateful(?)
-    url: /content/projects/2000-03-main-project/
-  - label: Portfolio
+  - label: Selected work
     url: "#portfolio"
-  - label: About/Contact
-    url: /about
+  - label: Portfolio
+    url: /about/
+  - label: Contact
+    url: /contact/
 footer:
-  text: Get in touch
+  text: Continue the conversation
   links:
     - label: Email
-      url: mailto:example@example.com
-    - label: GitHub
-      url: https://github.com/example-user
-  info: © 2024 Nasma. All rights reserved.
+      url: mailto:jane.doe@example.com
+    - label: Research archive
+      url: https://example.com/jane-doe
+  info: © 2026 Jane Doe. Fictional portfolio for demonstration purposes.
