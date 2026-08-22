@@ -23,3 +23,9 @@ The essay combines interviews, historical fragments, and observations from commu
 The workshops extend the essay into collective mapping. Participants draw a map of their building or neighbourhood that records overheated rooms, cold corners, unused spaces, repair knowledge, and places where people already share resources. They then imagine a local heat agreement. The agreement might establish shared maintenance, transparent data access, a winter check-in system, or a rule that no efficiency upgrade can be approved without consulting the people who live with it. These proposals are not presented as finished policy. Their value lies in making assumptions discussable.
 
 An orange light source is used in the workshop space to suggest warmth without simulating it. It also recalls the warning colours used by dashboards and emergency systems. Jane is interested in the difference between a signal and a solution. Heat Is a Public Question argues that energy justice requires more than better technology. It requires time, trust, public knowledge, and decision-making structures that recognise comfort as relational. The project invites audiences to treat warmth as a shared condition and a shared responsibility.
+
+![Orange glow from a communal heat workshop with annotated papers](/uploads/red.jpg "Small image example"){.small}
+
+![Orange glow from a communal heat workshop with annotated papers](/uploads/red.jpg "Medium image example"){.medium}
+
+![Orange glow from a communal heat workshop with annotated papers](/uploads/red.jpg "Large image example"){.large}

@@ -23,3 +23,9 @@ Visitors enter a dim room containing a long communal table. Turning one of sever
 The project grew from conversations with repair groups and community energy organisers who described governance as a material practice. Meetings, maintenance schedules, access agreements, and patient explanations are infrastructure too. Jane translated those observations into an environment where technical limits are not hidden behind smooth interfaces. The installation makes dependence tangible without turning it into a lesson or a game with a correct answer.
 
 During each presentation, participants are invited to annotate a growing map of local energy knowledge: places where materials can be repaired, skills can be shared, or surplus power can be redirected. The map remains unfinished by design. It is both an artwork and a proposal for a public record maintained by many hands. Commons Under Current asks what an energy system might feel like if its success were measured not by efficiency alone, but by the quality of relationships it enables.
+
+![Blue-lit table with reused electronic components and hand-drawn maps](/uploads/blue.jpg "Small image example"){.small}
+
+![Blue-lit table with reused electronic components and hand-drawn maps](/uploads/blue.jpg "Medium image example"){.medium}
+
+![Blue-lit table with reused electronic components and hand-drawn maps](/uploads/blue.jpg "Large image example"){.large}

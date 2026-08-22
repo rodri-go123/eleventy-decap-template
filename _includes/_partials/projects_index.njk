@@ -1,13 +1,10 @@
 <div id="projects-container" class="lp-slideshow" aria-label="Project slideshow" tabindex="0">
   <div class="lp-slides">
-    {% for project in collections.project | reverse %}
-      {% include "_partials/lp_pr_card.njk" %}
+    {% for project in collections.project | sort(true, false, "date") %}
+      {% include "_partials/slideshow_pr_card.njk" %}
     {% endfor %}
   </div>
   <div class="lp-slideshow-status" aria-live="polite"></div>
 </div>
 
-<script type="module">
-  import { initializeSlideshow } from '/scripts/slideshow.js';
-  initializeSlideshow();
-</script>
+<script type="module" src="/scripts/slideshow.js"></script>

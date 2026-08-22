@@ -23,3 +23,9 @@ Alongside the images, Jane collected stories about the decisions that make reuse
 The title refers to a form of decomposition that is social as much as material. Interfaces are designed to conceal the layers beneath them, while composting reveals that every object is made from dependencies. Jane photographed community workshops, gardens with improvised sensors, tool libraries, and rooms where old hardware is sorted for parts. The resulting images are paired with short annotations that name materials, software limitations, energy demands, and the people who contributed knowledge.
 
 The project includes a printed guide with blank pages for readers to add their own observations. It deliberately avoids a universal recipe for reuse. A technique that works in one context may be unsafe or impossible in another. Instead, the guide proposes a slower methodology: identify the material history, ask who can maintain the system, document the compromise, and share the result. Composting the Interface treats technology as something that can return to common life through care, translation, and collective imagination rather than through novelty.
+
+![Green photographic study of plants growing beside discarded computer parts](/uploads/green.jpg "Small image example"){.small}
+
+![Green photographic study of plants growing beside discarded computer parts](/uploads/green.jpg "Medium image example"){.medium}
+
+![Green photographic study of plants growing beside discarded computer parts](/uploads/green.jpg "Large image example"){.large}

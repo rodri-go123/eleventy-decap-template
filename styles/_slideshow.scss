@@ -12,72 +12,27 @@
   cursor: grabbing;
 }
 
-.lp-slides,
-.lp-pr-card {
+.lp-slides {
+  display: flex;
+  flex-wrap: nowrap;
   width: 100%;
   height: 100%;
+  will-change: transform;
+  /* transition is applied inline by slideshow.js so it can be toggled
+     off for the seamless loop wrap-around */
 }
 
 .lp-pr-card {
-  position: absolute;
-  inset: 0;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(0);
-  pointer-events: none;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Sliding animation from right (moving forward) */
-.lp-pr-card.slide-from-right {
-  animation: slideInFromRight 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* Sliding animation from left (moving backward) */
-.lp-pr-card.slide-from-left {
-  animation: slideInFromLeft 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.lp-pr-card.is-active {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-
-@keyframes slideInFromRight {
-  from {
-    visibility: visible;
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-    visibility: visible;
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .lp-pr-card-link {
-  display: block;
   color: inherit;
   text-decoration: none;
-  flex: 0 0 auto;
-  width: 100%;
   background: white;
 }
 
@@ -137,10 +92,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lp-pr-card,
-  .lp-pr-card.slide-from-right,
-  .lp-pr-card.slide-from-left {
-    animation: none;
-    transition: none;
+  .lp-slides {
+    transition: none !important;
   }
 }

@@ -23,3 +23,9 @@ Jane Doe filmed the project in repair cafés, community kitchens, storage cupboa
 The narrative moves between documentary testimony and fiction. In one sequence, a group imagines a future archive in which every battery is accompanied by a record of its owners, repairs, and journeys. In another, an unnamed municipal committee debates whether shared storage should be treated as a public utility, a household asset, or a commons. The discussion is intentionally unresolved. Jane is interested in how categories shape responsibility: when a device is called waste, who is allowed to abandon it, and when it is called infrastructure, who must maintain it?
 
 The film’s blue palette comes from practical sources rather than digital grading. Reflections from water, emergency lights, old screens, and workshop tarpaulins create shifting shades that connect domestic technology to larger systems of extraction. The Battery Has a Memory does not suggest that all objects can or should be saved. It asks instead what knowledge is lost when disposal is the only recognised ending, and what forms of collective governance might make maintenance a shared cultural practice.
+
+![Aqua-blue abstract image of battery cells and water reflections](/uploads/aqua.jpg "Small image example"){.small}
+
+![Aqua-blue abstract image of battery cells and water reflections](/uploads/aqua.jpg "Medium image example"){.medium}
+
+![Aqua-blue abstract image of battery cells and water reflections](/uploads/aqua.jpg "Large image example"){.large}

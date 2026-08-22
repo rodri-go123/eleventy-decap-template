@@ -1,80 +1,119 @@
-/**
- * Slideshow Module
- * Handles slide navigation with automatic rotation, keyboard support, and drag gestures
- * Features: Sliding transitions, drag-to-navigate, auto-rotate with timer reset
- */
-
 export function initializeSlideshow() {
   const slideshow = document.querySelector(".lp-slideshow");
   if (!slideshow) return;
 
-  const slides = [...slideshow.querySelectorAll(".lp-pr-card")];
-  const imageWrappers = [...slideshow.querySelectorAll(".lp-pr-image-wrapper")];
+  const track = slideshow.querySelector(".lp-slides");
   const status = slideshow.querySelector(".lp-slideshow-status");
+  const realSlides = [...track.querySelectorAll(".lp-pr-card")];
   const interval = 8000;
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const transitionMs = prefersReduced ? 0 : 600;
+  const easing = "cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+
+  if (realSlides.length === 0) return;
+
+  // Single slide: nothing to slide to
+  if (realSlides.length < 2) {
+    realSlides[0].classList.add("is-active");
+    realSlides[0].setAttribute("aria-hidden", "false");
+    if (status) status.textContent = `1 of 1`;
+    return;
+  }
+
+  // Slide clones for seamless infinite looping
+  // Extended track layout: [cloneOfLast, real0, real1, ..., realN-1, cloneOfFirst]
+  const firstClone = realSlides[0].cloneNode(true);
+  const lastClone = realSlides[realSlides.length - 1].cloneNode(true);
+  [firstClone, lastClone].forEach((clone) => {
+    clone.classList.add("is-clone");
+    clone.classList.remove("is-active");
+    clone.setAttribute("aria-hidden", "true");
+    const link = clone.querySelector(".lp-pr-card-link");
+    if (link) link.tabIndex = -1;
+  });
+  track.insertBefore(lastClone, realSlides[0]);
+  track.appendChild(firstClone);
+
+  const allSlides = [...track.querySelectorAll(".lp-pr-card")];
+  const imageWrappers = [...track.querySelectorAll(".lp-pr-image-wrapper")];
+  const totalCount = allSlides.length;
+
+  let position = 1;
   let current = 0;
   let timer;
+  let isAnimating = false;
   let pointerStartX = null;
   let pointerStartY = null;
   let isDragging = false;
 
-  const showSlide = (index, direction = 0) => {
-    current = (index + slides.length) % slides.length;
-
-    slides.forEach((slide, slideIndex) => {
-      const active = slideIndex === current;
-      
-      // Remove all direction classes
-      slide.classList.remove("is-active", "slide-from-left", "slide-from-right");
-      
-      if (active) {
-        // Add direction class to animate in
-        if (direction > 0) {
-          slide.classList.add("slide-from-right");
-        } else if (direction < 0) {
-          slide.classList.add("slide-from-left");
-        }
-        slide.classList.add("is-active");
-        slide.setAttribute("aria-hidden", "false");
-        
-        const link = slide.querySelector(".lp-pr-card-link");
-        if (link) link.tabIndex = 0;
-      } else {
-        slide.setAttribute("aria-hidden", "true");
-        const link = slide.querySelector(".lp-pr-card-link");
-        if (link) link.tabIndex = -1;
-      }
-    });
-
-    if (status) status.textContent = `${current + 1} of ${slides.length}`;
+  const setTransition = (enabled) => {
+    track.style.transition = enabled
+      ? `transform ${transitionMs}ms ${easing}`
+      : "none";
   };
 
-  const autoRotate = () => {
-    showSlide(current + 1, 1);
+  const applyPosition = () => {
+    track.style.transform = `translateX(-${position * 100}%)`;
+  };
+
+  const updateA11y = () => {
+    allSlides.forEach((slide, i) => {
+      const active = i === position;
+      slide.classList.toggle("is-active", active);
+      slide.setAttribute("aria-hidden", active ? "false" : "true");
+      const link = slide.querySelector(".lp-pr-card-link");
+      if (link) link.tabIndex = active ? 0 : -1;
+    });
+    if (status) status.textContent = `${current + 1} of ${realSlides.length}`;
+  };
+
+  // Instantly reposition the track without animating (used for loop wrap-around)
+  const snapNoTransition = () => {
+    setTransition(false);
+    applyPosition();
+    updateA11y();
+    void track.offsetWidth;
+    setTransition(true);
   };
 
   const resetTimer = () => {
     window.clearTimeout(timer);
-    timer = window.setTimeout(autoRotate, interval);
+    timer = window.setTimeout(() => move(1), interval);
   };
 
   const move = (direction) => {
-    showSlide(current + direction, direction);
+    if (isAnimating) return;
+    isAnimating = true;
+
+    position += direction;
+    current = (current + direction + realSlides.length) % realSlides.length;
+
+    setTransition(true);
+    applyPosition();
+    updateA11y();
     resetTimer();
+
+    window.setTimeout(() => {
+      // After landing on a clone, jump to the matching real slide seamlessly
+      if (position === 0) {
+        position = realSlides.length;
+        snapNoTransition();
+      } else if (position === totalCount - 1) {
+        position = 1;
+        snapNoTransition();
+      }
+      isAnimating = false;
+    }, transitionMs);
   };
 
-  if (slides.length < 2) {
-    showSlide(0);
-    return;
-  }
-
-  showSlide(0, 0);
+  // Initial placement (no animation)
+  snapNoTransition();
   resetTimer();
 
   // Keyboard navigation
-  slideshow.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") move(-1);
-    if (event.key === "ArrowRight") move(1);
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") console.log("left"), move(-1);
+    if (event.key === "ArrowRight") console.log("right"), move(1);
   });
 
   // Drag handlers on image wrappers

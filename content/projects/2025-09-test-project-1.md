@@ -23,3 +23,9 @@ Jane Doe designed the installation as a space for negotiation rather than a demo
 The project draws on the history of communal utilities and the contemporary language of platform terms of service. Both can make access appear simple while moving important decisions out of public view. A socket seems like a neutral point of connection, but its placement, capacity, ownership, and maintenance all distribute power. By enlarging this ordinary object into an architectural situation, Jane asks what democratic infrastructure might look like when its rules are open to revision.
 
 During presentations, a facilitator introduces practical scenarios. A community workshop has one functioning charger left. A neighbour needs power for medical equipment. A festival wants to use the system for an evening event. Participants must decide how to respond, but the installation does not reward consensus with a spectacular outcome. The result is a set of provisional protocols that can be read, challenged, and replaced. Protocols for a Shared Plug proposes that collective governance is not a layer added after technology is built. It is the ongoing work that makes connection possible.
+
+![Pink-lit wall of sockets, switches, and handwritten governance rules](/uploads/pink.jpg "Small image example"){.small}
+
+![Pink-lit wall of sockets, switches, and handwritten governance rules](/uploads/pink.jpg "Medium image example"){.medium}
+
+![Pink-lit wall of sockets, switches, and handwritten governance rules](/uploads/pink.jpg "Large image example"){.large}

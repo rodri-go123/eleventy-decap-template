@@ -23,3 +23,9 @@ Jane works at a bright yellow table, a colour chosen for its associations with c
 The lecture moves between practical demonstration and performance text. Jane discusses the gap between an object’s designed lifespan and its actual life, the labour often dismissed as tinkering, and the accessibility barriers built into repair culture. They also speak about the limits of repair. Sometimes replacement is safer, cheaper, or more just. Sometimes the desire to save an object can obscure the person who is carrying too much responsibility. The work makes room for these contradictions instead of turning repair into a moral demand.
 
 At the centre of the performance is a question about governance: who gets to decide what is worth maintaining? The answer changes depending on the object, the community, and the resources available. In the final section, the audience drafts a maintenance charter for the room. It includes commitments to document modifications, credit practical knowledge, share tools, and make it acceptable to stop. The charter is photographed, copied, and left behind for the next group to revise. The Repair Assembly frames maintenance as a creative and civic practice: a way of keeping systems answerable to the people who depend on them.
+
+![Yellow-lit performance table with tools, cables, and repair notes](/uploads/yellow.jpg "Small image example"){.small}
+
+![Yellow-lit performance table with tools, cables, and repair notes](/uploads/yellow.jpg "Medium image example"){.medium}
+
+![Yellow-lit performance table with tools, cables, and repair notes](/uploads/yellow.jpg "Large image example"){.large}
