@@ -4,6 +4,8 @@ export function initializeSlideshow() {
 
   const track = slideshow.querySelector(".lp-slides");
   const status = slideshow.querySelector(".lp-slideshow-status");
+  const previousButton = slideshow.querySelector(".lp-slideshow-button--previous");
+  const nextButton = slideshow.querySelector(".lp-slideshow-button--next");
   const realSlides = [...track.querySelectorAll(".lp-pr-card")];
   const interval = 8000;
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -17,6 +19,8 @@ export function initializeSlideshow() {
     realSlides[0].classList.add("is-active");
     realSlides[0].setAttribute("aria-hidden", "false");
     if (status) status.textContent = `1 of 1`;
+    if (previousButton) previousButton.disabled = true;
+    if (nextButton) nextButton.disabled = true;
     return;
   }
 
@@ -56,6 +60,20 @@ export function initializeSlideshow() {
     track.style.transform = `translateX(-${position * 100}%)`;
   };
 
+  const alignControlsToBody = () => {
+    if (!previousButton || !nextButton) return;
+
+    const activeBody = allSlides[position]?.querySelector(".lp-pr-body");
+    if (!activeBody) return;
+
+    const slideshowRect = slideshow.getBoundingClientRect();
+    const bodyRect = activeBody.getBoundingClientRect();
+    slideshow.style.setProperty(
+      "--lp-controls-y",
+      `${bodyRect.top - slideshowRect.top + bodyRect.height / 2}px`
+    );
+  };
+
   const updateA11y = () => {
     allSlides.forEach((slide, i) => {
       const active = i === position;
@@ -65,6 +83,7 @@ export function initializeSlideshow() {
       if (link) link.tabIndex = active ? 0 : -1;
     });
     if (status) status.textContent = `${current + 1} of ${realSlides.length}`;
+    alignControlsToBody();
   };
 
   // Instantly reposition the track without animating (used for loop wrap-around)
@@ -109,12 +128,16 @@ export function initializeSlideshow() {
   // Initial placement (no animation)
   snapNoTransition();
   resetTimer();
+  window.addEventListener("resize", alignControlsToBody);
 
   // Keyboard navigation
   window.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") console.log("left"), move(-1);
-    if (event.key === "ArrowRight") console.log("right"), move(1);
+    if (event.key === "ArrowLeft") move(-1);
+    if (event.key === "ArrowRight") move(1);
   });
+
+  previousButton?.addEventListener("click", () => move(-1));
+  nextButton?.addEventListener("click", () => move(1));
 
   // Drag handlers on image wrappers
   imageWrappers.forEach((wrapper) => {
