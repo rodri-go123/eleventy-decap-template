@@ -6,6 +6,7 @@
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.103);
   background-color: rgb(255, 255, 255);
+  font-family: var(--font-family-title);
 }
 
 .nav-wrapper {
@@ -24,12 +25,16 @@
 }
 
 #navbar h1 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 26px;
 }
 
 .nav-right, .nav-left {
   gap: 40px;
+}
+
+.nav-right {
+  font-weight: 300;
 }
 
 .nav-header {
@@ -58,7 +63,7 @@
   justify-content: space-between;
   font-size: 0.9rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   color: white;
 }
 

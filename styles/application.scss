@@ -2,8 +2,8 @@
   --black-grey: #252525;
   --spacer: 24px;
   --page-width: 1200px;
-  --font-family-sans: Helvetica, Arial, sans-serif;
-  --font-family-serif: 'Times New Roman', Times, serif;
+  --font-family-body: "IBM Plex Sans", sans-serif;
+  --font-family-title: "Inter", sans-serif;
 }
 
 html, body {
@@ -14,7 +14,7 @@ html, body {
   margin: 0;
   overflow-x: hidden;
 
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-body);
   font-weight: 400;
   font-style: normal;
   color: var(--black-grey);
@@ -32,7 +32,8 @@ body:has(.lp-slideshow) {
 
 // Text elements //
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-title);
+  font-weight: 500;
 }
 
 a {
