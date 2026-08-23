@@ -1,7 +1,7 @@
-title: Jane Doe — Artistic Research
+title: Andrea Mammarella
 nav:
-  - label: Main Project
-    url: /content/projects/2000-03-main-project/
+  - label: The Smelling Brain
+    url: /content/projects/2026-06-tsb-archive-edition/
   - label: About
     url: /about/
   - label: Contact
@@ -10,7 +10,7 @@ footer:
   text: Continue the conversation
   links:
     - label: Email
-      url: mailto:jane.doe@example.com
+      url: mailto:andrea.mammarella@example.com
     - label: Research archive
-      url: https://example.com/jane-doe
-  info: © 2026 Jane Doe. Fictional portfolio for demonstration purposes.
+      url: https://example.com/andrea-mammarella
+  info: © 2026 Andrea Mammarella. Fictional portfolio for demonstration purposes.

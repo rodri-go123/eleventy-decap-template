@@ -3,6 +3,14 @@ title: About
 layout: _pages/about.njk
 ---
 
-# About Jane Doe
+# About Andrea Mammarella
 
-Jane Doe is an artistic researcher exploring how technology can support collective, low-carbon futures. Their practice brings together installation, speculative design, writing, workshops, and situated experiments with communities. They work across alternative energy practices, investigating repair, shared infrastructure, energy justice, and the cultural life of materials. Re-use is both a method and a political commitment in their work: obsolete devices, discarded components, and inherited knowledge become starting points for new forms of attention. Jane also studies collective tech governance, asking how tools, platforms, and energy systems might be managed beyond extractive models. Their projects create spaces for learning, disagreement, and care, inviting people to imagine practical alternatives together. Jane is based nowhere in particular and collaborates wherever generous questions emerge.
+## Andrea Mammarella investigates perception, memory, and emotion through olfactory experimentation and speculative sensory research. His practice explores scent as a material capable of shaping embodied experience while revealing the invisible relationships between bodies, technologies, and environmental conditions.
+
+Working between scientific inquiry and speculative design, he develops immersive projects that reflect on sensory erosion, smell loss, and the growing perceptual desensitisation emerging within polluted and industrialised environments.
+
+Through The Smelling Brain, an ongoing research framework centred on olfaction, he approaches smell as both emotional medium and perceptual interface capable of reactivating memory, intimacy, and atmospheric awareness.
+
+Moving across installation, natural perfumery, responsive environments, and sensory interaction, his work examines how emotions, memories, and perceptual states can be encoded, transmitted, and reactivated through sensory experience.
+
+By combining material experimentation with speculative narratives and embodied interaction, he proposes alternative ways of understanding contemporary emotional, ecological, and technological conditions through the unstable and immersive nature of scent.

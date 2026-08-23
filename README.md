@@ -149,7 +149,6 @@ date: 2024-06-01
 thumbnail: /uploads/my-image.jpg
 imageAlt: "Description for screen readers"
 highlight: false
-projectDescription: "One-paragraph teaser shown on the landing page card."
 ```
 
 ### Images

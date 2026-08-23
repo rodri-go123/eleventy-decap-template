@@ -19,3 +19,6 @@ _site/
 
 # Image compression outputs
 content/uploads/_processed/
+
+# Temporary file directory
+tmp/
