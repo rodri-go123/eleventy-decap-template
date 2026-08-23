@@ -14,9 +14,7 @@ projectDescription: >-
 categories: [installation, governance, infrastructure]
 ---
 
-# Protocols for a Shared Plug
-
-Protocols for a Shared Plug is an installation about the small decisions that determine whether shared infrastructure feels generous or restrictive. The work begins with a wall of sockets assembled from reclaimed electrical fittings, obsolete adapters, labelled switches, and a low-voltage lighting system. It resembles a familiar charging station, but each outlet has a different condition. Some are available immediately, some require a contribution of stored energy, and some are reserved for a task that the group must define together.
+## Protocols for a Shared Plug is an installation about the small decisions that determine whether shared infrastructure feels generous or restrictive. The work begins with a wall of sockets assembled from reclaimed electrical fittings, obsolete adapters, labelled switches, and a low-voltage lighting system. It resembles a familiar charging station, but each outlet has a different condition. Some are available immediately, some require a contribution of stored energy, and some are reserved for a task that the group must define together.
 
 Jane Doe designed the installation as a space for negotiation rather than a demonstration of smart technology. Visitors receive cards with prompts such as “Who maintains this?” “What counts as urgent?” and “What should remain available when no one is watching?” They can propose rules, amend someone else’s rule, or refuse to participate. The system records no names and collects no behavioural data. Instead, changes are made with pencil, tape, and removable labels, leaving the governance process visible on the surface of the work.
 

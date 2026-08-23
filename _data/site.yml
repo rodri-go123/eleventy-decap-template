@@ -1,8 +1,8 @@
 title: Jane Doe — Artistic Research
 nav:
-  - label: Selected work
-    url: "#portfolio"
-  - label: Portfolio
+  - label: Main Project
+    url: /content/projects/2000-03-main-project/
+  - label: About
     url: /about/
   - label: Contact
     url: /contact/

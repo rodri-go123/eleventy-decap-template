@@ -14,9 +14,7 @@ projectDescription: >-
 categories: [performance, repair, pedagogy]
 ---
 
-# The Repair Assembly
-
-The Repair Assembly is a performance lecture in which Jane Doe attempts to repair a collection of ordinary objects while recounting the social histories attached to them. The objects include a desk lamp with a loose connection, a small radio with a missing dial, a keyboard with several unresponsive keys, and a solar charger whose panel still works but no longer fits its casing. The repairs are real but intentionally incomplete. What matters is not the reveal of a functioning object, but the chain of questions that emerges around each intervention.
+## The Repair Assembly is a performance lecture in which Jane Doe attempts to repair a collection of ordinary objects while recounting the social histories attached to them. The objects include a desk lamp with a loose connection, a small radio with a missing dial, a keyboard with several unresponsive keys, and a solar charger whose panel still works but no longer fits its casing. The repairs are real but intentionally incomplete. What matters is not the reveal of a functioning object, but the chain of questions that emerges around each intervention.
 
 Jane works at a bright yellow table, a colour chosen for its associations with caution tape, workshop markings, and shared visibility. They invite people in the audience to read labels, pass tools, test components, and contribute memories of things they have repaired or abandoned. A projected ledger records the vocabulary of the assembly: borrowed, adapted, undocumented, unsafe, teachable, shared. Each word is treated as a political category rather than a description.
 

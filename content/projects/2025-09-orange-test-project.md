@@ -14,9 +14,7 @@ projectDescription: >-
 categories: [writing, energy, housing]
 ---
 
-# Heat Is a Public Question
-
-Heat Is a Public Question is an essay and workshop series about the politics of staying warm. Jane Doe developed the project after noticing how energy conversations often become numerical before they become human. Bills, efficiency ratings, and consumption charts are important, but they can hide the uneven conditions in which people experience cold: rented rooms with poor insulation, care work performed at night, inaccessible heating controls, and buildings where the person paying the bill is not the person able to change the system.
+## Heat Is a Public Question is an essay and workshop series about the politics of staying warm. Jane Doe developed the project after noticing how energy conversations often become numerical before they become human. Bills, efficiency ratings, and consumption charts are important, but they can hide the uneven conditions in which people experience cold: rented rooms with poor insulation, care work performed at night, inaccessible heating controls, and buildings where the person paying the bill is not the person able to change the system.
 
 The essay combines interviews, historical fragments, and observations from communal spaces. It follows the route of warmth through pipes, walls, blankets, kitchens, and bodies, asking where responsibility begins and ends. Jane writes about boiler rooms as political spaces, about the quiet expertise of people who know how to keep an old building habitable, and about the ways emergency advice can fail when it assumes every household has the same resources. The language remains grounded in ordinary actions: closing a curtain, sharing a room, checking a meter, calling a neighbour, and negotiating with a landlord.
 

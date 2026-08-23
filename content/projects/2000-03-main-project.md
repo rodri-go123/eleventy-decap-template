@@ -14,9 +14,7 @@ projectDescription: >-
 categories: [energy, governance, participation]
 ---
 
-# Commons Under Current
-
-Commons Under Current is a participatory installation about the politics of keeping a light on. Jane Doe built the work from retired bicycle dynamos, salvaged copper, broken solar garden lamps, wooden shelving, and donated batteries whose original devices had become unusable. Nothing is presented as a neutral technical object. Each component carries a small label describing where it came from, how it was repaired, and what kind of labour made its second life possible.
+## Commons Under Current is a participatory installation about the politics of keeping a light on. Jane Doe built the work from retired bicycle dynamos, salvaged copper, broken solar garden lamps, wooden shelving, and donated batteries whose original devices had become unusable. Nothing is presented as a neutral technical object. Each component carries a small label describing where it came from, how it was repaired, and what kind of labour made its second life possible.
 
 Visitors enter a dim room containing a long communal table. Turning one of several hand-built cranks adds energy to a shared circuit, but the result is deliberately modest: a lamp brightens, a small fan moves, or a sound recording becomes audible. No single visitor can activate the whole installation. The room only becomes legible when people coordinate their effort, listen to one another, and decide which output matters most. A set of paper tokens lets participants propose rules for distributing the available charge. Should the light remain on for reading, or should the battery be saved for the fan? Who gets to change the rule, and when?
 

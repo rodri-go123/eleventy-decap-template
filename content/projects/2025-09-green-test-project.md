@@ -14,9 +14,7 @@ projectDescription: >-
 categories: [photography, reuse, technology]
 ---
 
-# Composting the Interface
-
-Composting the Interface is a photographic field guide to software after ownership. Jane Doe began the project by documenting devices that had left the commercial cycle but remained active in people’s lives: a router used as a local file server, a cracked tablet displaying recipes, an obsolete phone repurposed as a wildlife camera, and a monitor kept alive because its colour is still useful to a printmaker. The photographs resist the clean visual language of product launches. Cables are tangled, labels are handwritten, and repairs are visible.
+## Composting the Interface is a photographic field guide to software after ownership. Jane Doe began the project by documenting devices that had left the commercial cycle but remained active in people’s lives: a router used as a local file server, a cracked tablet displaying recipes, an obsolete phone repurposed as a wildlife camera, and a monitor kept alive because its colour is still useful to a printmaker. The photographs resist the clean visual language of product launches. Cables are tangled, labels are handwritten, and repairs are visible.
 
 Alongside the images, Jane collected stories about the decisions that make reuse possible. Who knows how to unlock an old device? Who has the time to search for a compatible part? Which operating systems can be trusted, and who is responsible when an unsupported machine becomes vulnerable? These questions shift attention from individual consumer choice to the infrastructures surrounding maintenance. Reuse is not simply a matter of being inventive. It depends on documentation, shared tools, accessible spaces, and collective agreements about risk.
 

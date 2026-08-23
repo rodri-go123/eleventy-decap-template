@@ -14,9 +14,7 @@ projectDescription: >-
 categories: [film, repair, memory]
 ---
 
-# The Battery Has a Memory
-
-The Battery Has a Memory is a 24-minute speculative film that follows a collection of rechargeable objects after their official useful life has ended. A phone with a failing cell, a solar lantern missing its casing, a laptop battery separated from its motherboard, and a power bank with a cracked shell move through a series of hands, workshops, and imagined landscapes. The objects never become characters in a literal sense. Instead, their histories are spoken through layered voices that ask what it means for a material to remember the work it has performed.
+## The Battery Has a Memory is a 24-minute speculative film that follows a collection of rechargeable objects after their official useful life has ended. A phone with a failing cell, a solar lantern missing its casing, a laptop battery separated from its motherboard, and a power bank with a cracked shell move through a series of hands, workshops, and imagined landscapes. The objects never become characters in a literal sense. Instead, their histories are spoken through layered voices that ask what it means for a material to remember the work it has performed.
 
 Jane Doe filmed the project in repair cafés, community kitchens, storage cupboards, and outdoor spaces where small-scale energy experiments take place. The camera lingers on gestures that conventional technology stories often omit: sorting screws, testing a connection, cleaning corrosion, explaining a warning, and deciding when repair is no longer safe. These actions become a choreography of care. A soundtrack assembled from charger hums, relay clicks, kettle switches, and room tone gives the film a pulse that is irregular but never silent.
 
