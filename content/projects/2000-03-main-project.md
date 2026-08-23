@@ -11,7 +11,6 @@ highlight: true
 projectDescription: >-
   Commons Under Current is a participatory installation that makes local energy
   systems visible as social relationships rather than invisible services.
-categories: [energy, governance, participation]
 ---
 
 ## Commons Under Current is a participatory installation about the politics of keeping a light on. Jane Doe built the work from retired bicycle dynamos, salvaged copper, broken solar garden lamps, wooden shelving, and donated batteries whose original devices had become unusable. Nothing is presented as a neutral technical object. Each component carries a small label describing where it came from, how it was repaired, and what kind of labour made its second life possible.

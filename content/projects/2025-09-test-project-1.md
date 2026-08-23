@@ -11,7 +11,6 @@ highlight: false
 projectDescription: >-
   Protocols for a Shared Plug turns an ordinary electrical outlet into a site
   for negotiating access, maintenance, trust, and collective responsibility.
-categories: [installation, governance, infrastructure]
 ---
 
 ## Protocols for a Shared Plug is an installation about the small decisions that determine whether shared infrastructure feels generous or restrictive. The work begins with a wall of sockets assembled from reclaimed electrical fittings, obsolete adapters, labelled switches, and a low-voltage lighting system. It resembles a familiar charging station, but each outlet has a different condition. Some are available immediately, some require a contribution of stored energy, and some are reserved for a task that the group must define together.

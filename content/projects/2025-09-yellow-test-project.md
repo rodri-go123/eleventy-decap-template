@@ -11,7 +11,6 @@ highlight: false
 projectDescription: >-
   The Repair Assembly is a performance lecture that treats maintenance as a
   collective form of knowledge, politics, and care.
-categories: [performance, repair, pedagogy]
 ---
 
 ## The Repair Assembly is a performance lecture in which Jane Doe attempts to repair a collection of ordinary objects while recounting the social histories attached to them. The objects include a desk lamp with a loose connection, a small radio with a missing dial, a keyboard with several unresponsive keys, and a solar charger whose panel still works but no longer fits its casing. The repairs are real but intentionally incomplete. What matters is not the reveal of a functioning object, but the chain of questions that emerges around each intervention.

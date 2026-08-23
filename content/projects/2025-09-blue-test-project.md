@@ -11,7 +11,6 @@ highlight: false
 projectDescription: >-
   The Battery Has a Memory is a speculative film tracing the emotional and
   political afterlives of objects designed to store energy.
-categories: [film, repair, memory]
 ---
 
 ## The Battery Has a Memory is a 24-minute speculative film that follows a collection of rechargeable objects after their official useful life has ended. A phone with a failing cell, a solar lantern missing its casing, a laptop battery separated from its motherboard, and a power bank with a cracked shell move through a series of hands, workshops, and imagined landscapes. The objects never become characters in a literal sense. Instead, their histories are spoken through layered voices that ask what it means for a material to remember the work it has performed.

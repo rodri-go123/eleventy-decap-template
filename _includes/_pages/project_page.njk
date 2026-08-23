@@ -15,17 +15,6 @@ css:
         <h1 class="pr-page-title">{{ title }}</h1>
         <h2 class="pr-page-subtitle">{{ subtitle }}</h2>
         <p class="pr-page-info">{{ info }}, {{year}}</p>
-        <p class="pr-page-categories">
-
-          {%- for category in categories -%}
-            <a href="/categories/{{ category | slug }}/"><span class="tag tag--big">{{ category | capitalize }}</span></a>
-            {%- if not loop.last -%}
-                &nbsp;
-              {%- endif -%}
-          {%- endfor -%}
-
-        </p>
-
         {% set cleanUrl = page.url | replace('^/', '') %}
         {% set lookupKey = page.url.slice(1) ~ 'index.html' %}
       </div>
