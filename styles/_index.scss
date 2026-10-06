@@ -1,8 +1,35 @@
 .lp-slideshow {
-	height: 100%;
+  height: 100%;
 }
 
-body:has(.lp-slideshow) #main {
-	min-height: 0;
-	overflow: hidden;
+body {
+  overflow: hidden;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--black-grey) 68%, transparent), transparent);
+  border-bottom: none;
+}
+
+#navbar .nav-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+#navbar a,
+#navbar a:hover {
+  color: var(--off-white);
+}
+
+#main {
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.lp-slideshow {
+  height: 100vh;
 }
