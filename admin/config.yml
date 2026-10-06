@@ -9,11 +9,11 @@ public_folder: "/uploads"         # how those files are served on the site
 
 collections:
 
-  # Header and Footer settings
+  # Header settings
   - name: "settings"
-    label: "Header and Footer"
+    label: "Header"
     files:
-      - label: "⚙️ Header (navigation) and Footer Settings"
+      - label: "⚙️ Header Settings"
         name: "site"
         file: "./_data/site.yml"
         fields:
@@ -25,20 +25,6 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
-          # Footer
-          - label: "Footer"
-            name: "footer"
-            widget: "object"
-            fields:
-              - { label: "Text", name: "text", widget: "string" }
-              - label: "Links"
-                name: "links"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
-              - { label: "Site information", name: "info", widget: "string" }
-
   # Landing page
   - name: "landing"
     label: "Landing Page"

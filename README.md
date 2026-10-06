@@ -14,7 +14,7 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 | Styles | SCSS (compiled by [sass](https://sass-lang.com/)) |
 | Content | Markdown + YAML front matter |
 | Global Data | YAML (`_data/site.yml`) |
-| Image Optimisation | `cwebp` (WebP conversion via shell script) |
+| Image Optimisation | `cwebp` (WebP conversion triggered on build) |
 
 ---
 
@@ -23,10 +23,10 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 ```
 .
 ├── _data/
-│   └── site.yml              # Global site data: title, nav links, footer
+│   └── site.yml              # Global site data: title and nav links
 ├── _includes/
 │   ├── _layouts/
-│   │   └── headers_footers.njk   # Base HTML shell with <head>, nav, footer
+│   │   └── header.njk             # Base HTML shell with <head> and nav
 │   ├── _pages/
 │   │   ├── index.njk         # Landing page template
 │   │   ├── about.njk         # About page template
@@ -50,7 +50,7 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 │   └── uploads/              # Raw uploaded images (gitignored: _processed/)
 ├── styles/
 │   ├── application.scss      # Global styles and CSS variables
-│   ├── _header_footer.scss
+│   ├── _header.scss
 │   ├── _index.scss
 │   ├── _project_card.scss
 │   ├── _project_page.scss
@@ -125,7 +125,7 @@ Then open `http://localhost:8080/admin` in your browser to access the CMS editor
 All editable content lives in `content/` as Markdown files with YAML front matter. You can edit these directly or through the CMS at `/admin`.
 
 ### Global Site Settings (`_data/site.yml`)
-Controls the site title, navigation links, and footer content. These are available in all templates as `{{ site.* }}`.
+Controls the site title, navigation links. These are available in all templates as `{{ site.* }}`.
 
 ### Pages
 | Page | Source File | Permalink |

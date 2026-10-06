@@ -6,11 +6,3 @@ nav:
     url: /about/
   - label: Contact
     url: /contact/
-footer:
-  text: Continue the conversation
-  links:
-    - label: Email
-      url: mailto:andrea.mammarella@example.com
-    - label: Research archive
-      url: https://example.com/andrea-mammarella
-  info: © 2026 Andrea Mammarella. Fictional portfolio for demonstration purposes.
