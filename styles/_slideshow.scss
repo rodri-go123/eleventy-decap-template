@@ -88,6 +88,9 @@
 
 .lp-pr-title:hover {
   text-decoration: underline;
+  text-decoration-color: var(--accent-red);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.12em;
 }
 
 .lp-pr-subtitle {

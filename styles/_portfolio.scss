@@ -55,8 +55,11 @@
   font-weight: 500;
 }
 
-.portfolio-card-title:hover {
+.portfolio-card-link:hover .portfolio-card-title {
   text-decoration: underline;
+  text-decoration-color: var(--accent-red);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.12em;
 }
 
 .portfolio-card-subtitle {
