@@ -26,7 +26,7 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 │   └── site.yml              # Global site data: title and nav links
 ├── _includes/
 │   ├── _layouts/
-│   │   └── header.njk             # Base HTML shell with <head> and nav
+│   │   └── header_footer.njk             # Base HTML shell with <head> and nav
 │   ├── _pages/
 │   │   ├── index.njk         # Landing page template
 │   │   ├── about.njk         # About page template
@@ -50,7 +50,7 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 │   └── uploads/              # Raw uploaded images (gitignored: _processed/)
 ├── styles/
 │   ├── application.scss      # Global styles and CSS variables
-│   ├── _header.scss
+│   ├── _header_footer.scss
 │   ├── _index.scss
 │   ├── _project_card.scss
 │   ├── _project_page.scss

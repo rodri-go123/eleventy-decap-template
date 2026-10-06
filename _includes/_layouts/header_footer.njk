@@ -1,6 +1,6 @@
 ---
 css:
-  - /styles/_header.css
+  - /styles/_header_footer.css
   - /styles/application.css
 ---
 
@@ -51,6 +51,26 @@ css:
     <div id="main" class="flex-center">
       {{ content | safe }}
     </div>
+
+    {% if page.url != "/" %}
+      {# footer #}
+      <footer id="footer" class="flex-center">
+        <div class="foot-wrapper full-width">
+
+          <div class="foot-left flex-center">
+            <p>{{ site.footer.text }}</p>
+            {% for link in site.footer.links %}
+              <a href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+          </div>
+
+          <div class="foot-right flex-center">
+            <p>{{ site.footer.info }}</p>
+          </div>
+
+        </div>
+      </footer>
+    {% endif %}
 
   </body>
 </html>

@@ -25,6 +25,19 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
+          # Footer
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Site information", name: "info", widget: "string" }
   # Landing page
   - name: "landing"
     label: "Landing Page"
