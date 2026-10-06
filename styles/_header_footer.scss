@@ -19,7 +19,8 @@
   color: var(--black-grey);
 }
 
-#navbar a:hover {
+#navbar a:hover,
+#navbar a.active {
   text-decoration: underline;
   color: var(--purple-blue);
 }
