@@ -49,6 +49,9 @@ export function initializeSlideshow() {
   let pointerStartX = null;
   let pointerStartY = null;
   let isDragging = false;
+  let didDrag = false;
+  let suppressClick = false;
+  let dragOffsetX = 0;
 
   const setTransition = (enabled) => {
     track.style.transition = enabled
@@ -57,21 +60,7 @@ export function initializeSlideshow() {
   };
 
   const applyPosition = () => {
-    track.style.transform = `translateX(-${position * 100}%)`;
-  };
-
-  const alignControlsToBody = () => {
-    if (!previousButton || !nextButton) return;
-
-    const activeBody = allSlides[position]?.querySelector(".lp-pr-body");
-    if (!activeBody) return;
-
-    const slideshowRect = slideshow.getBoundingClientRect();
-    const bodyRect = activeBody.getBoundingClientRect();
-    slideshow.style.setProperty(
-      "--lp-controls-y",
-      `${bodyRect.top - slideshowRect.top + bodyRect.height / 2}px`
-    );
+    track.style.transform = `translateX(calc(-${position * 100}% + ${dragOffsetX}px))`;
   };
 
   const updateA11y = () => {
@@ -83,7 +72,6 @@ export function initializeSlideshow() {
       if (link) link.tabIndex = active ? 0 : -1;
     });
     if (status) status.textContent = `${current + 1} of ${realSlides.length}`;
-    alignControlsToBody();
   };
 
   // Instantly reposition the track without animating (used for loop wrap-around)
@@ -128,7 +116,6 @@ export function initializeSlideshow() {
   // Initial placement (no animation)
   snapNoTransition();
   resetTimer();
-  window.addEventListener("resize", alignControlsToBody);
 
   // Keyboard navigation
   window.addEventListener("keydown", (event) => {
@@ -139,12 +126,36 @@ export function initializeSlideshow() {
   previousButton?.addEventListener("click", () => move(-1));
   nextButton?.addEventListener("click", () => move(1));
 
+  slideshow.addEventListener("click", (event) => {
+    if (!suppressClick) return;
+    event.preventDefault();
+    event.stopPropagation();
+    suppressClick = false;
+  }, true);
+
+  let wheelLock = false;
+  slideshow.addEventListener("wheel", (event) => {
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) || Math.abs(event.deltaX) < 20) return;
+
+    event.preventDefault();
+    if (wheelLock || isAnimating) return;
+
+    wheelLock = true;
+    move(event.deltaX > 0 ? 1 : -1);
+    window.setTimeout(() => {
+      wheelLock = false;
+    }, transitionMs);
+  }, { passive: false });
+
   // Drag handlers on image wrappers
   imageWrappers.forEach((wrapper) => {
     wrapper.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+
       pointerStartX = event.clientX;
       pointerStartY = event.clientY;
       isDragging = true;
+      didDrag = false;
       slideshow.classList.add("is-dragging");
       wrapper.setPointerCapture(event.pointerId);
     });
@@ -154,16 +165,21 @@ export function initializeSlideshow() {
 
       const deltaX = event.clientX - pointerStartX;
       const deltaY = event.clientY - pointerStartY;
+      const shouldMove = Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY);
       isDragging = false;
       slideshow.classList.remove("is-dragging");
       pointerStartX = null;
       pointerStartY = null;
+      suppressClick = didDrag;
 
-      // Minimum 50px drag to trigger slide change
-      if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (shouldMove) {
         const direction = deltaX < 0 ? 1 : -1;
+        dragOffsetX = 0;
         move(direction);
       } else {
+        dragOffsetX = 0;
+        setTransition(true);
+        applyPosition();
         resetTimer();
       }
     });
@@ -173,6 +189,10 @@ export function initializeSlideshow() {
       slideshow.classList.remove("is-dragging");
       pointerStartX = null;
       pointerStartY = null;
+      suppressClick = didDrag;
+      dragOffsetX = 0;
+      setTransition(true);
+      applyPosition();
     });
 
     wrapper.addEventListener("pointermove", (event) => {
@@ -181,9 +201,16 @@ export function initializeSlideshow() {
       const deltaX = event.clientX - pointerStartX;
       const deltaY = event.clientY - pointerStartY;
 
-      // Prevent default only if dragging horizontally
+      if (Math.abs(deltaX) > 8 || Math.abs(deltaY) > 8) {
+        didDrag = true;
+      }
+
+      // Move the track with the pointer so the adjacent slide is revealed.
       if (Math.abs(deltaX) > Math.abs(deltaY)) {
         event.preventDefault();
+        dragOffsetX = deltaX;
+        setTransition(false);
+        applyPosition();
       }
     });
   });
