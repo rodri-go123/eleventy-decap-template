@@ -30,7 +30,6 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 │   ├── _pages/
 │   │   ├── index.njk         # Landing page template
 │   │   ├── about.njk         # About page template
-│   │   ├── contact.njk       # Contact page template
 │   │   └── project_page.njk  # Individual project page template
 │   └── _partials/
 │       ├── projects_index.njk    # Loops over all projects and renders cards
@@ -45,7 +44,6 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 ├── content/
 │   ├── landing/landing.md    # Landing page content
 │   ├── about/about.md        # About page content
-│   ├── contact/contact.md    # Contact page content
 │   ├── projects/             # One .md file per project
 │   └── uploads/              # Raw uploaded images (gitignored: _processed/)
 ├── styles/
@@ -57,7 +55,6 @@ A static portfolio site built with [Eleventy (11ty)](https://www.11ty.dev/) and 
 │   ├── _projects_index.scss
 │   ├── _projects.scss
 │   ├── _about.scss
-│   └── _contact.scss
 ├── build.sh                  # Production build script
 └── eleventy.config.js        # Eleventy configuration
 ```
@@ -132,7 +129,6 @@ Controls the site title, navigation links. These are available in all templates 
 |---|---|---|
 | Landing / Portfolio | `content/landing/landing.md` | `/` |
 | About | `content/about/about.md` | `/about/` |
-| Contact | `content/contact/contact.md` | `/contact/` |
 
 ### Projects
 Each project is a single Markdown file in `content/projects/`. File names follow the slug pattern `YYYY-MM-<slug>.md`. Projects are tagged `project` and collected by Eleventy into `collections.project`, which the landing page loops over to render project cards.

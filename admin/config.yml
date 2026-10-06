@@ -60,17 +60,6 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
-  # Contact page
-  - name: "contact"
-    label: "Contact Page"
-    files:
-      - file: "content/contact/contact.md"
-        label: "Contact Content"
-        name: "contact"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-
   # Projects (folder-based)
   - name: "projects"
     label: "Projects"
