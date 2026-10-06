@@ -1,5 +1,7 @@
 title: Andrea Mammarella
 nav:
+  - label: Portfolio
+    url: /portfolio/
   - label: The Smelling Brain
     url: /content/projects/2026-06-tsb-archive-edition/
   - label: About

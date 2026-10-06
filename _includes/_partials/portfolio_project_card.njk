@@ -1,0 +1,12 @@
+<article class="portfolio-card">
+  <a class="portfolio-card-link" href="{{ project.url }}">
+    <div class="portfolio-card-image-wrapper">
+      <img class="portfolio-card-image" src="{{ project.data.thumbnail | toWebp }}" alt="{{ project.data.imageAlt }}">
+    </div>
+    <div class="portfolio-card-body">
+      <h2 class="portfolio-card-title">{{ project.data.title }}</h2>
+      <p class="portfolio-card-subtitle">{{ project.data.subtitle }}</p>
+      <p class="portfolio-card-info">{{ project.data.info }}, {{ project.data.year }}</p>
+    </div>
+  </a>
+</article>

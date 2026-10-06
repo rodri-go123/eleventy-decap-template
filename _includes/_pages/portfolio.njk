@@ -1,0 +1,14 @@
+---
+layout: _layouts/header.njk
+css:
+  - /styles/_portfolio.css
+permalink: "/portfolio/"
+---
+
+<main class="portfolio-page-container main-section full-width">
+  <div class="portfolio-grid">
+    {% for project in collections.project | sort(true, false, "date") %}
+      {% include "_partials/portfolio_project_card.njk" %}
+    {% endfor %}
+  </div>
+</main>
