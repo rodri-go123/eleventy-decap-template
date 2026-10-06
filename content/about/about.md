@@ -2,6 +2,7 @@
 title: About
 layout: _pages/about.njk
 ---
+![](/uploads/about-picture.jpg " "){.medium}
 
 # About Andrea Mammarella
 
